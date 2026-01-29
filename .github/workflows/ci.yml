@@ -1,0 +1,19 @@
+name: CI Pipeline
+
+on:
+  push:
+     branches: [ "main"]
+  pull_request:
+     branches: ["main"]
+
+jobs:
+  runs-on: ubuntu0latest
+
+  steps:
+  - name: Checkout repository
+    uses: action/chekout@v4
+
+  - name: Run build step
+    run: |
+      echo "Building app;ication..."
+      echo "Build completed successfully"
